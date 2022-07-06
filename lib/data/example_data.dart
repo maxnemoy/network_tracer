@@ -1,0 +1,3 @@
+String initialData = """
+{"connections":[{"from":1,"to":2},{"from":2,"to":3},{"from":3,"to":4},{"from":4,"to":5},{"from":4,"to":6},{"from":4,"to":7}],"items":[{"id":7,"title":"Desktop 3","offset":{"dx":910.0,"dy":557.0},"connectionType":"dhcp"},{"id":6,"title":"Desktop 2","offset":{"dx":908.0,"dy":441.0},"connectionType":"dhcp"},{"id":5,"title":"Desktop 1","offset":{"dx":246.0,"dy":549.0},"connectionType":"dhcp"},{"id":2,"title":"MainRouter Router","offset":{"dx":569.0,"dy":216.0}},{"id":1,"title":"RT Router","offset":{"dx":569.0,"dy":81.0}},{"id":3,"title":"MainSwitch Switch","offset":{"dx":569.0,"dy":356.0},"isManaged":true},{"id":4,"title":"Some switch","offset":{"dx":569.0,"dy":485.0},"isManaged":false}]}
+""";
