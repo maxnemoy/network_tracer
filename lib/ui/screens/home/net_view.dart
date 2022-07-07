@@ -51,8 +51,9 @@ class _NetworkViewState extends State<NetworkView> {
           }),
         )));
     setState(() {});
-    Future.delayed(const Duration(milliseconds: 10))
-        .then((value) => _buildLines());
+    WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
+      _buildLines();
+    });
   }
 
   List<Widget> lines = [];
@@ -64,7 +65,7 @@ class _NetworkViewState extends State<NetworkView> {
       var from =
           items.firstWhere((element) => element.item.id == e.from);
       var to = items.firstWhere((element) => element.item.id == e.to);
-
+    
       List<Offset> points = [];
 
       points.add(from.centerBy(from.item
