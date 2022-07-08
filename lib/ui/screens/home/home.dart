@@ -34,10 +34,11 @@ class _HomeState extends State<Home> {
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
               ElevatedButton(
-                  child: const Text("export"),
-                  onPressed: () {
-                    debugPrint(jsonEncode(data.toJson()));
-                  }),
+                child: const Text("export"),
+                onPressed: () {
+                  debugPrint(jsonEncode(data.toJson()));
+                },
+              ),
             ],
           ),
         ],
