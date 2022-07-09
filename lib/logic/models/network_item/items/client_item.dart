@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart' show IconData, Color, Icons, Offset;
 import 'package:json_annotation/json_annotation.dart';
-import 'package:network_tracer/models/exp.dart';
+import 'package:network_tracer/logic/models/exp.dart';
 
 part 'client_item.g.dart';
 
@@ -14,6 +14,10 @@ class ClientItem extends INetworkItem {
       required super.title,
       super.offset,
       this.connectionType = ConnectionType.dhcp});
+
+  ClientItem.mock()
+      : connectionType = ConnectionType.dhcp,
+        super(id: 1, offset: Offset.zero, title: "Client");
 
   factory ClientItem.fromJson(Map<String, dynamic> json) =>
       _$ClientItemFromJson(json);

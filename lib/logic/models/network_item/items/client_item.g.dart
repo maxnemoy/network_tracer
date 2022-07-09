@@ -21,7 +21,7 @@ Map<String, dynamic> _$ClientItemToJson(ClientItem instance) =>
       'id': instance.id,
       'title': instance.title,
       'offset': INetworkItem.offsetToJson(instance.offset),
-      'connectionType': _$ConnectionTypeEnumMap[instance.connectionType],
+      'connectionType': _$ConnectionTypeEnumMap[instance.connectionType]!,
     };
 
 const _$ConnectionTypeEnumMap = {

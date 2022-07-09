@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:network_tracer/models/network_item/network_item.dart';
+import 'package:network_tracer/logic/models/exp.dart';
 import 'package:network_tracer/ui/components/network_item_presenter.dart';
 import 'package:network_tracer/utils/positioned.dart';
 

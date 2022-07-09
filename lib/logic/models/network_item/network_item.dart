@@ -12,8 +12,10 @@ abstract class INetworkItem {
   INetworkItem({required this.id, required this.title, Offset? offset})
       : offset = offset ?? Offset.zero;
 
-  static Offset offsetFromJson(Map<String, dynamic>? o) => o?["dx"] == null || o?["dy"] == null ? Offset.zero :
-      Offset(o!["dx"] ?? 0, o["dy"] ?? 0);
+  static Offset offsetFromJson(Map<String, dynamic>? o) =>
+      o?["dx"] == null || o?["dy"] == null
+          ? Offset.zero
+          : Offset(o!["dx"] ?? 0, o["dy"] ?? 0);
 
   static Map<String, double> offsetToJson(Offset o) => {"dx": o.dx, "dy": o.dy};
 

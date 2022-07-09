@@ -9,6 +9,7 @@ class ConnectionItem {
 
   ConnectionItem({required this.from, required this.to});
 
-  factory ConnectionItem.fromJson(Map<String, dynamic> json) => _$ConnectionItemFromJson(json);
+  factory ConnectionItem.fromJson(Map<String, dynamic> json) =>
+      _$ConnectionItemFromJson(json);
   Map<String, dynamic> toJson() => _$ConnectionItemToJson(this);
 }

@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart' show IconData, Color, Icons, Offset;
 
 import 'package:json_annotation/json_annotation.dart';
-import 'package:network_tracer/models/exp.dart';
+import 'package:network_tracer/logic/models/exp.dart';
 
 part 'switch_item.g.dart';
-
 
 @JsonSerializable()
 class SwitchItem extends INetworkItem {
@@ -14,6 +13,10 @@ class SwitchItem extends INetworkItem {
       required super.title,
       super.offset,
       this.isManaged = false});
+
+  SwitchItem.mock()
+      : isManaged = false,
+        super(id: 1, offset: Offset.zero, title: "Switch");
 
   factory SwitchItem.fromJson(Map<String, dynamic> json) =>
       _$SwitchItemFromJson(json);

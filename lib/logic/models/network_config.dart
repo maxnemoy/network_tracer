@@ -1,8 +1,7 @@
 import 'package:json_annotation/json_annotation.dart';
-import 'package:network_tracer/models/exp.dart';
+import 'package:network_tracer/logic/models/exp.dart';
 
 part 'network_config.g.dart';
-
 
 @JsonSerializable()
 class NetworkConfigData<T extends INetworkItem> {

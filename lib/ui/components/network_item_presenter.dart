@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:network_tracer/models/exp.dart';
+import 'package:network_tracer/logic/models/exp.dart';
 
 class NetworkItemPresenter<T extends INetworkItem> extends StatelessWidget {
   final T networkItem;

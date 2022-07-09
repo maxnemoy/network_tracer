@@ -4,7 +4,7 @@ import 'package:network_tracer/utils/object_connector/connection_data.dart';
 import 'package:network_tracer/utils/object_connector/line_data.dart';
 import 'package:network_tracer/ui/components/positioned_wrapper.dart';
 
-mixin ObjectConnector {
+mixin ObjectConnectorMixin {
   List<ConnectionLineData> _getRectangleLines(PositionedWrapper rectangle) {
     Offset topLeft = rectangle.item.offset;
     Offset topRight = topLeft.translate(rectangle.size.width, 0);
@@ -50,7 +50,6 @@ mixin ObjectConnector {
 
   ConnectionData connectItems(
       PositionedWrapper rectangle1, PositionedWrapper rectangle2) {
-    // _getMiddlePoints(rectangle1);
     var connections1 = _getConnections(rectangle1, rectangle2);
     var connections2 = _getConnections(rectangle2, rectangle1);
     var connections = connections1.intersection(connections2).toList();
