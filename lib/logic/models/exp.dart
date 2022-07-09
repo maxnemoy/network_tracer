@@ -1,5 +1,6 @@
 export 'connection_item/connection_item.dart';
 
+export 'network_item/items/all_items_set.dart';
 export 'network_item/items/client_item.dart';
 export 'network_item/items/router_item.dart';
 export 'network_item/items/switch_item.dart';

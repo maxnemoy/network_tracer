@@ -6,26 +6,26 @@ mixin PositionedMixin {
 
   Size get size => (key.currentContext?.findRenderObject() as RenderBox).size;
 
-  Offset globalPosition(Offset o) =>
-      (key.currentContext?.findRenderObject() as RenderBox).localToGlobal(o);
+  Offset globalPosition(Offset scrollOffset) =>
+      (key.currentContext?.findRenderObject() as RenderBox)
+          .localToGlobal(scrollOffset);
 
-  Offset centerBy(ConnectorPosition pos, Offset o) {
+  Offset centerBy(ConnectorPosition pos, Offset scrollOffset) {
     switch (pos) {
       case ConnectorPosition.left:
-        return Offset(
-            globalPosition(o).dx, globalPosition(o).dy + size.height / 2);
+        return Offset(globalPosition(scrollOffset).dx,
+            globalPosition(scrollOffset).dy + size.height / 2);
       case ConnectorPosition.top:
-        return Offset(
-            globalPosition(o).dx + size.width / 2, globalPosition(o).dy);
+        return Offset(globalPosition(scrollOffset).dx + size.width / 2,
+            globalPosition(scrollOffset).dy);
       case ConnectorPosition.right:
-        return Offset(globalPosition(o).dx + size.width,
-            globalPosition(o).dy + size.height / 2);
+        return Offset(globalPosition(scrollOffset).dx + size.width,
+            globalPosition(scrollOffset).dy + size.height / 2);
       case ConnectorPosition.bottom:
-        return Offset(globalPosition(o).dx + size.width / 2,
-            globalPosition(o).dy + size.height);
+        return Offset(globalPosition(scrollOffset).dx + size.width / 2,
+            globalPosition(scrollOffset).dy + size.height);
       default:
-        return Offset(
-            globalPosition(o).dx + size.width / 2, globalPosition(o).dy);
+        throw ("unimplemented position");
     }
   }
 }

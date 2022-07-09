@@ -3,6 +3,7 @@ import 'package:json_annotation/json_annotation.dart';
 
 enum ConnectorPosition { left, top, right, bottom }
 
+
 abstract class INetworkItem {
   final int id;
   final String title;

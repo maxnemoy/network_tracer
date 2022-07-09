@@ -2,7 +2,7 @@ import "dart:math" as math;
 import 'package:flutter/material.dart' show Offset;
 import 'package:network_tracer/utils/object_connector/connection_data.dart';
 import 'package:network_tracer/utils/object_connector/line_data.dart';
-import 'package:network_tracer/ui/components/positioned_wrapper.dart';
+import 'package:network_tracer/ui/components/network_item/positioned_wrapper.dart';
 
 mixin ObjectConnectorMixin {
   List<ConnectionLineData> _getRectangleLines(PositionedWrapper rectangle) {

@@ -6,7 +6,11 @@ class NetworkDataService implements INetworkDataService {
   NetworkConfigData<INetworkItem>? _data;
 
   @override
-  void addNetworkItem(INetworkItem item) {}
+  void addNetworkItem(INetworkItem item) {
+    List<INetworkItem> list = _data?.items.toList() ?? [];
+    list.add(item.copyWith(id: list.length));
+    _data = _data?.copyWith(items: list);
+  }
 
   @override
   Future<NetworkConfigData<INetworkItem>> load() async {

@@ -3,7 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:network_tracer/config/singleton.dart';
 import 'package:network_tracer/logic/services/canvas_scrolling_service/i_canvas_scrolling_service.dart';
 import 'package:network_tracer/ui/bloc/network_data/data.dart';
-import 'package:network_tracer/ui/components/positioned_wrapper.dart';
+import 'package:network_tracer/ui/components/network_item/positioned_wrapper.dart';
 
 class NetworkView extends StatelessWidget {
   const NetworkView({super.key});

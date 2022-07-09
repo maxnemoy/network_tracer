@@ -8,7 +8,7 @@ import 'package:network_tracer/logic/models/exp.dart';
 import 'package:network_tracer/logic/services/canvas_scrolling_service/i_canvas_scrolling_service.dart';
 import 'package:network_tracer/logic/services/navigation/i_navigation_service.dart';
 import 'package:network_tracer/ui/components/line_painter.dart';
-import 'package:network_tracer/ui/components/positioned_wrapper.dart';
+import 'package:network_tracer/ui/components/network_item/positioned_wrapper.dart';
 import 'package:network_tracer/utils/object_connector/object_connector.dart';
 
 import 'repository/i_network_data_service.dart';
@@ -82,5 +82,14 @@ class NetworkDataCubit extends Cubit<NetworkConfigData?>
       ));
     }
     _linesStream.add(lines);
+  }
+
+  void addItem(INetworkItem item, DraggableDetails details) {
+    _dataRepository.addNetworkItem(item.copyWith(
+      offset: details.offset.translate(
+          singleton<ICanvasScrollingService>().offset.dx,
+          singleton<ICanvasScrollingService>().offset.dy),
+    ));
+    rebuildItems();
   }
 }
