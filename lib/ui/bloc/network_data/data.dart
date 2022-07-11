@@ -92,4 +92,9 @@ class NetworkDataCubit extends Cubit<NetworkConfigData?>
     ));
     rebuildItems();
   }
+
+  void addConnection(INetworkItem from, INetworkItem to) {
+    _dataRepository.addConnection(from, to);
+    rebuildItems();
+  }
 }

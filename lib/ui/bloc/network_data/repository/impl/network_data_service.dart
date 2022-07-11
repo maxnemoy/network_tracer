@@ -8,7 +8,7 @@ class NetworkDataService implements INetworkDataService {
   @override
   void addNetworkItem(INetworkItem item) {
     List<INetworkItem> list = _data?.items.toList() ?? [];
-    list.add(item.copyWith(id: list.length));
+    list.add(item.copyWith(id: list.length + 1));
     _data = _data?.copyWith(items: list);
   }
 
@@ -38,5 +38,12 @@ class NetworkDataService implements INetworkDataService {
   @override
   Future<void> save() {
     throw UnimplementedError();
+  }
+
+  @override
+  void addConnection(INetworkItem from, INetworkItem to) {
+    List<ConnectionItem> list = _data?.connections.toList() ?? [];
+    list.add(ConnectionItem(from: from.id, to: to.id));
+    _data = _data?.copyWith(connections: list);
   }
 }

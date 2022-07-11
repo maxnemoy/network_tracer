@@ -21,4 +21,6 @@ abstract class INetworkDataService {
   void addNetworkItem(INetworkItem item);
   void removeNetworkItem(INetworkItem item);
   void replaceNetworkItem(INetworkItem item);
+
+  void addConnection(INetworkItem from, INetworkItem to);
 }
